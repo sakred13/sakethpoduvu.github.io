@@ -111,8 +111,12 @@
           </div>
 
           <div class="col-lg-8 mt-5 mt-lg-0">
-
-<form id="contactForm" role="form" class="php-email-form" action="#">
+            <!-- Web3Forms Integration -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
+              <!-- Replace with your Access Key -->
+              <input type="hidden" name="access_key" value="78a29eb1-c87b-45d7-a15b-c8e9072d667d">
+          
+              <!-- Form Inputs. Each input must have a name="" attribute -->
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -127,13 +131,18 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-<div class="my-3">
-  <div class="sent-message" id="success-message">Your message has been sent. Thank you!</div>
-</div>
+              <!-- Honeypot Spam Protection -->
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+              <!-- Custom Confirmation / Success Page -->
+              <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-
-          </div>
+          </div>          
 
         </div>
 
