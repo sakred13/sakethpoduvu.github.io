@@ -1291,3 +1291,56 @@ section {
 #footer .credits a {
   color: #34b7a7;
 }
+
+.skills-chip {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #34b7a7;
+  border-radius: 25px;
+  transition: background-color 0.3s;
+}
+
+.skills-chip:hover {
+  background-color: #2a9d8f;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;  /* This ensures the container uses all the horizontal space */
+}
+
+.skills-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;  /* This ensures the group inside also takes full width */
+}
+
+.portfolio-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube-logo-overlay {
+  position: absolute;
+  top: 40%;  /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Align the center of the element with the center of its parent */
+  width: 25%; /* 40% of the parent container's size */
+  height: 25%; /* 40% of the parent container's size */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.youtube-logo-overlay img {
+  width: 100%; /* Fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
